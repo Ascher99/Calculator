@@ -86,7 +86,6 @@ case '()2':
 
 }
 
-       console.log("Result:", result); // Dodaj ten wiersz
 
 addToHistory();
 historyBtn.classList.add('active');
