@@ -28,7 +28,7 @@ const historyBtn = document.querySelector('.history-btn');
 let result = '';
 
 function displayNumbers() {
-    const clickedNumber = this.textContent;
+    const clickedNumber = this.value;
 
     if (clickedNumber === ',' && currentsNumber.innerHTML.includes(',')) return;
 
@@ -63,8 +63,8 @@ function showResult () {
 if (previousNumber.innerHTML=== '' || currentsNumber.innerHTML ==='') 
 return;
 
-let a =Number(currentsNumber.innerHTML);
-let b =Number(previousNumber.innerHTML);
+let a =parseFloat(currentsNumber.innerHTML);
+let b =parseFloat(previousNumber.innerHTML);
 let operator = MathSign.innerHTML;
 
 switch (operator){
