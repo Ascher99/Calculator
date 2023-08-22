@@ -11,22 +11,11 @@ const numberButtons=document.querySelectorAll('.number');
 
 
 const operatorButtons= document.querySelectorAll('.operator');
-
-
 const equalsButton=document.querySelector('.equals');
-
-
 const clearButton= document.querySelector('.clear');
-
-
 const calculatorHistory=document.querySelector('.history');
-
-
 const historyBtn = document.querySelector('.history-btn');
-
-
 let result = '';
-
 function displayNumbers() {
     const clickedNumber = this.textContent;
 
@@ -38,8 +27,6 @@ function displayNumbers() {
         currentsNumber.innerHTML += clickedNumber;
     }
 }
-
-
 function operate () {
  if (currentsNumber.innerHTML === '' && this.textContent === '-'){
     currentsNumber.innerHTML = '-';
@@ -59,13 +46,12 @@ function operate () {
  currentsNumber.innerHTML='';
 }
 
-function showResult() {
-    if (previousNumber.innerHTML === '' || currentsNumber.innerHTML === '') return;
+function showResult () {
+if (previousNumber.innerHTML=== '' || currentsNumber.innerHTML ==='') 
+return;
 
-let a = Number(currentsNumber.innerHTML);
-let b = Number(previousNumber.innerHTML);
-
-
+let a =Number(currentsNumber.innerHTML);
+let b =Number(previousNumber.innerHTML);
 let operator = MathSign.innerHTML;
 
 switch (operator){
@@ -87,7 +73,6 @@ case '()2':
 
 }
 
-
 addToHistory();
 historyBtn.classList.add('active');
 currentsNumber.innerHTML=result;
@@ -98,11 +83,10 @@ MathSign.innerHTML = '';
 
 function addToHistory() {
     const newHistoryItem = document.createElement('li');
-    newHistoryItem.innerHTML = `${currentsNumber.innerHTML.replace(',', '.')} ${MathSign.innerHTML} ${previousNumber.innerHTML.replace(',', '.')} = ${result}`;
+    newHistoryItem.innerHTML= `${currentsNumber.innerHTML} ${MathSign.innerHTML} ${previousNumber.innerHTML} = ${result}`
     newHistoryItem.classList.add('history-item');
     calculatorHistory.appendChild(newHistoryItem);
 }
-
 
 function clearHistory() {
 calculatorHistory.textContent='';
