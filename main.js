@@ -28,12 +28,15 @@ const historyBtn = document.querySelector('.history-btn');
 let result = '';
 
 function displayNumbers() {
-    const clickedNumber = this.value;
+    const clickedNumber = this.textContent;
 
-    if (clickedNumber === '.' && currentsNumber.innerHTML.includes('.')) return;
+    if (clickedNumber === ',' && currentsNumber.innerHTML.includes(',')) return;
 
-    const newNumber = currentsNumber.innerHTML + clickedNumber;
-    currentsNumber.innerHTML = newNumber.replace(',', '.');
+    if (clickedNumber === ',' && currentsNumber.innerHTML === '') {
+        currentsNumber.innerHTML = '0' + clickedNumber;
+    } else {
+        currentsNumber.innerHTML += clickedNumber;
+    }
 }
 
 
