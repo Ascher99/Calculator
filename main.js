@@ -62,8 +62,9 @@ function operate () {
 function showResult() {
     if (previousNumber.innerHTML === '' || currentsNumber.innerHTML === '') return;
 
-    let a = parseFloat(currentsNumber.innerHTML.replace(',', '.'));
-    let b = parseFloat(previousNumber.innerHTML.replace(',', '.'));
+let a = Number(currentsNumber.innerHTML);
+let b = Number(previousNumber.innerHTML);
+
 
 let operator = MathSign.innerHTML;
 
