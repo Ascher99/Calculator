@@ -94,10 +94,11 @@ MathSign.innerHTML = '';
 
 function addToHistory() {
     const newHistoryItem = document.createElement('li');
-    newHistoryItem.innerHTML= `${currentsNumber.innerHTML} ${MathSign.innerHTML} ${previousNumber.innerHTML} = ${result}`
+    newHistoryItem.innerHTML = `${currentsNumber.innerHTML.replace(',', '.')} ${MathSign.innerHTML} ${previousNumber.innerHTML.replace(',', '.')} = ${result}`;
     newHistoryItem.classList.add('history-item');
     calculatorHistory.appendChild(newHistoryItem);
 }
+
 
 function clearHistory() {
 calculatorHistory.textContent='';
