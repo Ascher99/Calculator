@@ -21,7 +21,7 @@ function displayNumbers() {
 
     if (clickedNumber === '.' && currentsNumber.innerHTML.includes('.')) return;
 
-    if (clickedNumber === ',' && currentsNumber.innerHTML === '') {
+    if (clickedNumber === '.' && currentsNumber.innerHTML === '') {
         currentsNumber.innerHTML = '.0' + clickedNumber;
     } else {
         currentsNumber.innerHTML += clickedNumber;
