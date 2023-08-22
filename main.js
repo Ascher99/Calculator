@@ -19,10 +19,10 @@ let result = '';
 function displayNumbers() {
     const clickedNumber = this.textContent;
 
-    if (clickedNumber === ',' && currentsNumber.innerHTML.includes(',')) return;
+    if (clickedNumber === '.' && currentsNumber.innerHTML.includes('.')) return;
 
     if (clickedNumber === ',' && currentsNumber.innerHTML === '') {
-        currentsNumber.innerHTML = '0' + clickedNumber;
+        currentsNumber.innerHTML = '.0' + clickedNumber;
     } else {
         currentsNumber.innerHTML += clickedNumber;
     }
