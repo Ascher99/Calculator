@@ -56,12 +56,12 @@ function operate () {
  currentsNumber.innerHTML='';
 }
 
-function showResult () {
-if (previousNumber.innerHTML=== '' || currentsNumber.innerHTML ==='') 
-return;
+function showResult() {
+    if (previousNumber.innerHTML === '' || currentsNumber.innerHTML === '') return;
 
-let a =parseFloat(currentsNumber.innerHTML);
-let b =parseFloat(previousNumber.innerHTML);
+    let a = parseFloat(currentsNumber.innerHTML.replace(',', '.'));
+    let b = parseFloat(previousNumber.innerHTML.replace(',', '.'));
+
 let operator = MathSign.innerHTML;
 
 switch (operator){
