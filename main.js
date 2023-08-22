@@ -32,11 +32,8 @@ function displayNumbers() {
 
     if (clickedNumber === '.' && currentsNumber.innerHTML.includes('.')) return;
 
-    if (clickedNumber === '.' && currentsNumber.innerHTML === '') {
-        currentsNumber.innerHTML = '0' + clickedNumber;
-    } else {
-        currentsNumber.innerHTML += clickedNumber;
-    }
+    const newNumber = currentsNumber.innerHTML + clickedNumber;
+    currentsNumber.innerHTML = newNumber.replace(',', '.');
 }
 
 
